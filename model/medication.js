@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const commentSchema = mongoose.Schema(
+const medicationSchema = mongoose.Schema(
   {
     name: {
       type: String,
@@ -22,4 +22,4 @@ const commentSchema = mongoose.Schema(
   { timestamps: true },
 )
 
-module.exports = mongoose.model('Comment', commentSchema)
+module.exports = mongoose.model('Medication', medicationSchema)

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const blogSchema = mongoose.Schema(
+const evotalSchema = mongoose.Schema(
   {
     image: {
       type: String,
@@ -44,4 +44,4 @@ const blogSchema = mongoose.Schema(
   { timestamps: true },
 )
 
-module.exports = mongoose.model('Blog', blogSchema)
+module.exports = mongoose.model('Evotal', evotalSchema)
