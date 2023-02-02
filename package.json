@@ -1,0 +1,29 @@
+{
+  "name": "evotal_backend_application",
+  "version": "1.0.0",
+  "description": "A transportation solution system application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beloved1310/Evotal_Backend_Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beloved1310/Evotal_Backend_Application/issues"
+  },
+  "homepage": "https://github.com/Beloved1310/Evotal_Backend_Application#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20"
+  }
+}
