@@ -23,9 +23,9 @@ app.use(cors({ origin: '*' }))
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json({ limit: '50mb' }))
-// app.use('/evotal', evotal)
+app.use('/evotal', evotal)
 // app.use('/medication', medication)
-// app.use('/', user)
+app.use('/', user)
 
 app.listen(PORT, () => {
   console.log(`Web server is running ${PORT}`)

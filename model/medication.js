@@ -2,6 +2,12 @@ const mongoose = require('mongoose')
 
 const medicationSchema = mongoose.Schema(
   {
+    image: {
+      type: String,
+    },
+    cloudinary_id: {
+      type: String,
+    },
     name: {
       type: String,
     },

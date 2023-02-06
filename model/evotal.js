@@ -1,18 +1,13 @@
 const mongoose = require('mongoose')
 
+// default: 'user'
 const evotalSchema = mongoose.Schema(
   {
-    image: {
-      type: String,
-    },
-    cloudinary_id: {
-      type: String,
-    },
     serialNumber: {
       type: Number,
     },
     model: {
-      type: Number,
+      type: String,
       enum: ['Lightweight', 'Middleweight', 'Cruiserweight', 'Heavyweight'],
     },
     batteryCapacity: {
@@ -22,12 +17,8 @@ const evotalSchema = mongoose.Schema(
       type: Number,
     },
     state: {
-      type: Number,
+      type: String,
       enum: ['IDLE', 'LOADING', 'DELIVERING', 'DELIVERED', 'RETURNING'],
-    },
-    date: {
-      type: Date,
-      default: Date.now,
     },
     user: {
       _id: mongoose.Types.ObjectId,

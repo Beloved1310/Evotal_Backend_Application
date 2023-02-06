@@ -3,7 +3,7 @@ const asyncMiddleware = require('../middleware/async.js')
 
 const router = express.Router()
 
-const signUp = require('../controller/user/signup')
+const signUp = require('../controller/user/signUp')
 const login = require('../controller/user/login')
 
 router.post('/signup', asyncMiddleware(signUp))
