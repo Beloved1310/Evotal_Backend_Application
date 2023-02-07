@@ -22,6 +22,7 @@ module.exports = async (req, res) => {
   })
 
   const savedMedication = await medication.save()
+  console.log(savedMedication, 'hhh')
   const data = {
     image,
     cloudinary_id,

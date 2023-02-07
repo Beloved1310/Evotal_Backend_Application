@@ -28,7 +28,7 @@ const evotalSchema = mongoose.Schema(
     medications: [
       {
         type: mongoose.Schema.Types.ObjectID,
-        ref: 'medication',
+        ref: 'Medication',
       },
     ],
   },
