@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt')
 
 const User = require('../../model/user')
-const loginValidate = require('../../Validation/loginValidate')
+const loginValidate = require('../../validation/loginValidate')
 
 module.exports = async (req, res) => {
   const { value, error } = loginValidate(req.body)

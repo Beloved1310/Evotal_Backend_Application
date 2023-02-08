@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt')
 const User = require('../../model/user')
-const signUpValidate = require('../../Validation/signupValidate')
+const signUpValidate = require('../../validation/signupValidate')
 
 module.exports = async (req, res) => {
   const { value, error } = signUpValidate(req.body)

@@ -1,6 +1,6 @@
 const Evotal = require('../../model/evotal')
 const cloudinary = require('../../utilis/cloudinary')
-const loadMedicationValidate = require('../../Validation/loadMedicationValidate')
+const loadMedicationValidate = require('../../validation/loadMedicationValidate')
 const Medication = require('../../model/medication')
 
 module.exports = async (req, res) => {

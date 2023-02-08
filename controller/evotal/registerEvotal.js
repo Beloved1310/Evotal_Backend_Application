@@ -1,7 +1,7 @@
 const Evotal = require('../../model/evotal')
 const User = require('../../model/user')
 
-const registerEvotal = require('../../Validation/registerEvotal')
+const registerEvotal = require('../../validation/registerEvotal')
 
 module.exports = async (req, res) => {
   const { value, error } = registerEvotal(req.body)
