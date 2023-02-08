@@ -1,6 +1,6 @@
 const Evotal = require('../../model/evotal')
 const cloudinary = require('../../utilis/cloudinary')
-const loadMedicationValidate = require('../../validation/loadMedicationValidate')
+const loadMedicationValidate = require('../../Validation/loadMedicationValidate')
 const Medication = require('../../model/medication')
 
 module.exports = async (req, res) => {
@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
   if (weightLimit === 500 || weight > 500) {
     return res
       .status(200)
-      
+
       .send({ message: 'Medication loaded at maximum limit' })
   }
 
