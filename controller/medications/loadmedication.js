@@ -17,6 +17,7 @@ module.exports = async (req, res) => {
   if (weightLimit === 500 || weight > 500) {
     return res
       .status(200)
+      
       .send({ message: 'Medication loaded at maximum limit' })
   }
 
