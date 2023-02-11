@@ -12,9 +12,7 @@ module.exports = function validate(input) {
         )
       )
       .required()
-      .label(
-        'Password must contain atleat one Capital letter, small letter, special symbol and must not be less than 8 characters'
-      ),
+      
   })
   return schema.validate(input)
 }
