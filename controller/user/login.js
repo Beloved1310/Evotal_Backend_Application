@@ -18,6 +18,6 @@ module.exports = async (req, res) => {
 
   const token = user.generateAuthToken()
   res.header('x-auth-token', token)
-  const data = { email, token }
+  const data = { fullname: user.fullname, email, token }
   return res.send({ message: 'Login Successful', data })
 }
