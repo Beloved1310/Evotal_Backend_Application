@@ -11,7 +11,7 @@ const availableEvtol = require('../controller/evotal/availableEvtol')
 const evtolBatteryLevel = require('../controller/evotal/evtolBatteryLevel')
 
 router.get('/:evotalId', asyncMiddleware(getEvotalMedication))
-router.get('/available/loading', asyncMiddleware(availableEvtol))
+router.get('/available/loading', auth,asyncMiddleware(availableEvtol))
 router.get(
   '/available/battery/level/:evotaId',
   asyncMiddleware(evtolBatteryLevel),
