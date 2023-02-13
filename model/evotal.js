@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-// default: 'user'
 const evotalSchema = mongoose.Schema(
   {
     serialNumber: {
