@@ -7,6 +7,7 @@ module.exports = async (req, res) => {
   const { value, error } = loadMedicationValidate(req.body)
   if (error) return res.status(400).send({ error: error.details[0].message })
   const { name, weight, code } = value
+  console.log(code ,'..')
   const {
     secure_url: image,
     public_id: cloudinary_id,
@@ -44,8 +45,12 @@ module.exports = async (req, res) => {
 
   await Evotal.findOneAndUpdate(
     { _id: req.params.id },
-    { weightLimit: addedweight },
-    { $push: { medications: savedMedication } },
+    { weightLimit: addedweight }
+  )
+
+  await Evotal.findOneAndUpdate(
+    { _id: req.params.id },
+    { $push: { medications: savedMedication } }
   )
 
   return res.status(200).json({ message: 'Medication added', data })
