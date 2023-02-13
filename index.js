@@ -9,6 +9,7 @@ require('./db/dbConnect')()
 const evotal = require('./routes/evotal')
 const user = require('./routes/user')
 const medication = require('./routes/medication')
+const batterCapacity = require('./routes/batteryCapacity')
 
 process.on('unhandledRejection', (err) => {
   console.log(err, 'Unhandled Rejection at Promise')
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json({ limit: '50mb' }))
 app.use('/evotal', evotal)
 app.use('/medication', medication)
+app.use('/battery', batterCapacity)
 app.use('/user', user)
 
 app.listen(PORT, () => {
