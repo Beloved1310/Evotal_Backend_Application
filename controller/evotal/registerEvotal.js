@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
   const user = await User.findOne({ _id: req.user._id }).select(
     'fullname email -_id',
   )
-  cron.schedule('* * * * *', async () => {
+  cron.schedule('60 * * * *', async () => {
     await BatteryCapacityHistory.create({ batteryCapacity })
   })
   const serialNumber = Math.floor(100000 + Math.random() * 900000)
