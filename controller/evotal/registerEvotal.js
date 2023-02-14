@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
     model,
     batteryCapacity,
     weightLimit,
-    currentState,
+    state: currentState,
     user,
   })
   const data = {
@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
     model,
     batteryCapacity,
     weightLimit,
-    currentState,
+    state: currentState,
   }
   return res.status(200).json({ message: 'Evotal created', data })
 }
